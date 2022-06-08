@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "include/FileSystemWatcher.h"
+#include "FileSystemWatcher.h"
 
 void print(bool &running_);
 
@@ -10,7 +10,7 @@ int main() {
   FileWatcher::Watcher dog(path);
 
   std::cout << "watching...\n";
-  dog.watch(FileWatcher::Status::Modified, print);
+  dog.watch(print);
 }
 
 void print(bool &running_) {
